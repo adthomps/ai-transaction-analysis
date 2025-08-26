@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -88,26 +89,11 @@ export const ExampleTransactions = ({ onSelectExample }: ExampleTransactionsProp
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(true);
 
-
-
-
-
-
-
-
-
-
   const handleCopy = (id: string) => {
     navigator.clipboard.writeText(id);
     setCopiedId(id);
     toast({ title: "Copied!", description: `Transaction ID ${id} copied to clipboard.` });
     setTimeout(() => setCopiedId(null), 1500);
-
-
-
-
-
-
   };
 
   return (
@@ -151,7 +137,6 @@ export const ExampleTransactions = ({ onSelectExample }: ExampleTransactionsProp
                     aria-label={`Copy transaction ID ${transaction.id}`}
                     onClick={() => handleCopy(transaction.id)}
                     className={`transition-colors ${copiedId === transaction.id ? 'bg-success/20' : ''}`}
-
                   >
                     <Copy className="h-4 w-4" />
                   </Button>
@@ -168,3 +153,4 @@ export const ExampleTransactions = ({ onSelectExample }: ExampleTransactionsProp
     </Card>
   );
 };
+// End of ExampleTransactions component

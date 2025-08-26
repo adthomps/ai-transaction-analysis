@@ -32,3 +32,4 @@ dist-ssr
 wrangler.toml
 wrangler.*.toml
 wrangler.secrets.*
+

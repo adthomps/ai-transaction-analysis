@@ -95,7 +95,6 @@ const Index = () => {
         data: null,
         errorMessage: "Failed to analyze transaction. Please try again."
       });
-
       toast({
         title: "Analysis Failed",
         description: "Unable to complete transaction analysis. Please check the transaction ID and try again.",
